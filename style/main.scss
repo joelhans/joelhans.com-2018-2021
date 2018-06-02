@@ -1,0 +1,121 @@
+/*! Styling for joelhans.com
+   ========================================================================== */
+
+/* Imports
+   ========================================================================== */
+
+@import "normalize.css/normalize";
+@import "milligram/dist/milligram";
+
+/* Variables
+   ========================================================================== */
+
+$base  : rgba(0, 0, 0, 0.8);
+$red   : #ff1654;
+$green : #3ca2a2;
+$blue  : #247ba0;
+
+/* Document
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff;
+  color: $base;
+  font: 400 4rem/1.3 'Cormorant Garamond', serif;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography
+   ========================================================================== */
+
+h1 {
+  font-family: 'Playfair Display';
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+}
+
+a {
+  position: relative;
+  color: $green;
+  font-style: italic;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  
+  &:hover { color: $blue; }
+
+  &:after {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-image: linear-gradient(-90deg,$blue 0,$green 100%);
+  }
+}
+
+.small {
+  font-size: 3rem;
+}
+
+/* Grid
+   ========================================================================== */
+
+.container {
+  margin-top: 20rem;
+}
+
+/* Index
+   ========================================================================== */
+
+.details {
+  margin-top: 6rem;
+}
+
+.photo {
+  margin: 6rem 0 2rem;
+}
+
+.photo img {
+  display: block;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+.photo figcaption {
+  display: block;
+  max-width: 400px;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+/* Stories
+   ========================================================================== */
+
+.stories p {
+  @extend .small;
+}
+
+.stories a {
+  font-style: normal;
+}
