@@ -1,29 +1,7 @@
-// var
-//   // Modules
-//   gulp = require('gulp'),
-//   sass = require('gulp-sass'),
-//   // connect = require('gulp-connect'),
-//   browserSync = require('browser-sync').create(),
-
-//   // Directories
-//   dir = {
-//     src: 'style/**/*.scss',
-//     dest: 'dist/'
-//   }
-// ;
-
-
-
-// const { watch } = require('browser-sync');
 var gulp = require('gulp');
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass');
-// const postcss = require('gulp-postcss');
-// const cssnano = require('cssnano');
-// const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
-// var sass = require('gulp-sass');
-// var browsersync = require('browser-sync').create();
 var dir = {
   src: 'style/**/*.scss',
   dest: 'dist/'
